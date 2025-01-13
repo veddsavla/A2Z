@@ -20,7 +20,6 @@ public:
                 return false;
             if (rev < INT_MIN / 10 || (rev == INT_MIN / 10 && digit < -8))
                 return false;
-
             rev = rev * 10 + digit;
         }
         return rev == og;
