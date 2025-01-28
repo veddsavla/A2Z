@@ -1,31 +1,46 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 // } Driver Code Ends
-// User function Template for C++
-class Solution {
-  public:
-    vector<long long> factorialNumbers(long long n) {
-        // Write Your Code here
-        if(factorialNumbers(n)>n){
-            return;
+// User function Template for
+class Solution
+{
+public:
+    // Function to find factorial numbers less than or equal to N.
+    vector<long long> factorialNumbers(long long n)
+    {
+        vector<long long> ans;
+        long long int fact = 1;
+        int x = 2;
+
+        // Iterating until factorial is less than or equal to N.
+        while (fact <= n)
+        {
+            // Adding factorial to the answer list.
+            ans.push_back(fact);
+
+            // Calculating next factorial by multiplying with next number.
+            fact = fact * x;
+            x++;
         }
-        
-        return factorialNumbers(n-1);
+        // Returning the list of factorial numbers.
+        return ans;
     }
 };
 
 //{ Driver Code Starts.
-int main() {
+int main()
+{
     int t;
     cin >> t;
-    while (t--) {
+    while (t--)
+    {
         long long N;
         cin >> N;
         Solution ob;
         vector<long long> ans = ob.factorialNumbers(N);
-        for (auto num : ans) {
+        for (auto num : ans)
+        {
             cout << num << " ";
         }
         cout << endl;
