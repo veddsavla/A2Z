@@ -14,3 +14,13 @@ public:
         return result;
     }
 };
+
+// for the input [4, 1, 2, 1, 2] :-
+
+// result = 0
+// result ^= 4  →  result = 4
+// result ^= 1  →  result = 4 ^ 1
+// result ^= 2  →  result = (4 ^ 1) ^ 2
+// result ^= 1  →  result = ((4 ^ 1) ^ 2) ^ 1  →  4 ^ (1 ^ 1) ^ 2  →  4 ^ 0 ^ 2  →  4 ^ 2
+// result ^= 2  →  4 ^ 2 ^ 2  →  4 ^ 0  →  4
+
