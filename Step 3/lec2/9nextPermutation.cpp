@@ -17,6 +17,8 @@ public:
             }
         }
 
+        // hi 
+        
         if (index == -1)
         {
             return reverse(nums.begin(), nums.end());
