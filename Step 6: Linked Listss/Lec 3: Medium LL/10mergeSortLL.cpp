@@ -20,7 +20,7 @@ ListNode *merge(ListNode *list1, ListNode *list2)
         {
             temp->next = list1;
             list1 = list1->next;
-        }
+        }w
         else
         {
             temp->next = list2;
