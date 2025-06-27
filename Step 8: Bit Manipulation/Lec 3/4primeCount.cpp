@@ -25,6 +25,8 @@ public:
             if (prime[k])
             {
                 count++;
+            // or in case wanna print count :
+                // return count;
             }
         }
         return count;
